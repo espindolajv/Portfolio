@@ -24,7 +24,7 @@ export function CarouselSection() {
         <section className="w-full p-8 flex flex-col items-center gap-20 relative py-32" id='project-section'>
             <div className="flex flex-col items-center">
                 <h2 className="font-semibold text-3xl">Meus Projetos</h2>
-                <h3 className="text-xl italic">My projects</h3>
+                <h3 className="text-xl italic opacity-70">My projects</h3>
             </div>
 
             <div className="flex flex-col gap-3 items-center justify-center">

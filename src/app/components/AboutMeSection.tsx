@@ -6,7 +6,7 @@ export function AboutMeSection() {
         <section className="w-full flex flex-col justify-center items-center px-72 gap-20 py-32" id="aboutme-section">
             <div className="flex flex-col items-center">
                 <h2 className="font-semibold text-3xl">Sobre mim</h2>
-                <h3 className="text-xl italic">About me</h3>
+                <h3 className="text-xl italic opacity-70">About me</h3>
             </div>
 
             <div className="flex gap-28 justify-center items-center">
@@ -36,7 +36,7 @@ export function AboutMeSection() {
 
             <div className="flex flex-col gap-2 justify-center items-center w-full">
                 <div className="w-full px-2">
-                    <DropDown height="200" title="Formações" style="">
+                    <DropDown height="200" title="Formações" subtitle='Qualifications' style="" width="w-[300px]">
                         <div className="w-full flex gap-6">
                             <div className="w-1/2 h-40 bg-glass rounded-2xl p-8 flex flex-col gap-3 relative hover:scale-110 duration-300 hover:z-40">
                                 <div>
@@ -78,7 +78,7 @@ export function AboutMeSection() {
                 </div>
 
                 <div className="w-full flex flex-col gap-6 px-2">
-                    <DropDown style="flex flex-col gap-4" height="450" title="Cursos">
+                    <DropDown style="flex flex-col gap-4" height="450" title="Cursos" subtitle='Courses' width="w-52">
                         <div className="w-full flex justify-between items-center font-semibold opacity-70 hover:opacity-100 duration-300 text-lg">
                             <p>HTML e CSS</p>
                             <p>OneBitCode - 2022</p>

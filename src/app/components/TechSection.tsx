@@ -24,7 +24,7 @@ export function TechSection() {
                                 {item.logo}
                             </div>
 
-                            <span className="opacity-0 group-hover:opacity-100 px-2 py-1 rounded-xl justify-center items-center text-sm font-semibold duration-300 animate-fade-in">{item.name}</span>
+                            <span className="opacity-0 group-hover:opacity-100 px-2 py-1 rounded-xl justify-center items-center text-sm font-semibold duration-300 animate-fade-in text-nowrap">{item.name}</span>
                         </CarouselItem>
                     ))}
 

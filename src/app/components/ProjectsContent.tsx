@@ -1,8 +1,7 @@
 
 import { Cat, Layers, Package } from 'lucide-react';
-import dashboardPagePetzone from '../../../public/Petzone_Dashboard.png'
-import Image from "next/image";
 import { LogoBrand } from './LogoBrand';
+import { PetzoneBlock } from './PetzoneBlock';
 
 export function ProjectsContent() {
     return (
@@ -71,8 +70,9 @@ export function ProjectsContent() {
                                 <p className='opacity-70 text-sm text-semibold'>Lorem ipsum dolor sit amet consectetur.</p>
                             </div>
                         </div>
-                        <div className='absolute h-[400px] w-[710px] rounded-md left-7 bottom-10 shadow-lg'>
-                            <Image src={dashboardPagePetzone} alt='Home Page Petzone' fill className='rounded-lg' />
+                        <div className='absolute h-[400px] w-[710px] rounded-lg left-7 bottom-10 shadow-lg bg-white flex gap-9'>
+                            {/* <Image src={dashboardPagePetzone} alt='Home Page Petzone' fill className='rounded-lg' /> */}
+                            <PetzoneBlock />
                         </div>
                     </div>
                 </div>
