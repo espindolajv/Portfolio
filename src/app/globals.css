@@ -43,55 +43,6 @@ body {
   z-index: -1;
 }
 
-/* Gradiente 1 */
-.bg-gradient-color-mesh {
-  position: relative; /* Para garantir que o conteúdo da div seja posicionado em cima */
-  background-color: hsla(0, 0%, 0%, 1);
-  background-image: radial-gradient(
-      at 40% 20%,
-      hsla(347, 21%, 12%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 46% 40%, hsla(185, 11%, 20%, 1) 0px, transparent 50%),
-    radial-gradient(at 8% 65%, hsla(180, 63%, 18%, 1) 0px, transparent 50%),
-    radial-gradient(at 65% 26%, hsla(154, 17%, 51%, 1) 0px, transparent 50%),
-    radial-gradient(at 73% 65%, hsla(69, 26%, 84%, 0.39) 0px, transparent 50%);
-  z-index: 0; /* Configura o gradiente para sobrepor o granulado */
-}
-
-/* Gradiente 2 */
-.bg-gradient-color-light {
-  position: relative;
-  background-color: hsla(251, 68%, 100%, 1);
-  background-image: radial-gradient(
-      circle at 8% 31%,
-      hsla(180, 63%, 18%, 0.52) 4%,
-      transparent 81%
-    ),
-    radial-gradient(
-      circle at 40% 68%,
-      hsla(185.00000000000003, 11%, 20%, 0.07) 4%,
-      transparent 81%
-    ),
-    radial-gradient(
-      circle at 60% 78%,
-      hsla(180, 62%, 19%, 0.44) 4%,
-      transparent 81%
-    ),
-    radial-gradient(
-      circle at 94% 99%,
-      hsla(69.99999999999991, 26%, 84%, 0.76) 4%,
-      transparent 81%
-    ),
-    radial-gradient(
-      circle at 30% 82%,
-      hsla(69.99999999999991, 26%, 84%, 0.56) 4%,
-      transparent 81%
-    );
-  background-blend-mode: normal, normal, normal, normal, normal;
-  z-index: 1; /* Se necessário, ajuste para que fique acima de outros backgrounds */
-}
-
 .bg-glass {
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.1);
@@ -124,4 +75,65 @@ html {
   :root {
     --radius: 0.5rem;
   }
+}
+
+/* body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-x: scroll;
+  background: radial-gradient(circle, #1e3a8a, #2563eb);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+} */
+
+.bg-dark-gradient {
+  background: linear-gradient(227deg, #2d3839, #114d4d, #6e9987);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
+}
+
+.bg-light-gradient {
+  background: linear-gradient(227deg, #eaeaea, #e0e4ce, #98c5b2);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:50% 0%}
+  50%{background-position:51% 100%}
+  100%{background-position:50% 0%}
 }

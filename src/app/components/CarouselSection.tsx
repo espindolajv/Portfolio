@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { ProjectsContent } from "./ProjectsContent";
+import { PetzoneContent } from "./PetzoneContent";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
 import { Circle } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
+import { PlannContent } from "./PlannContent";
 
 
 export function CarouselSection() {
@@ -39,15 +40,15 @@ export function CarouselSection() {
                     <CarouselContent>
 
                         <CarouselItem >
-                            <ProjectsContent />
+                            <PetzoneContent />
                         </CarouselItem>
 
                         <CarouselItem className="mx-32">
-                            <ProjectsContent />
+                            <PlannContent />
                         </CarouselItem>
 
                         <CarouselItem >
-                            <ProjectsContent />
+                            <PetzoneContent />
                         </CarouselItem>
 
                     </CarouselContent>

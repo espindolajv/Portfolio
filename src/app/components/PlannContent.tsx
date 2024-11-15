@@ -1,9 +1,9 @@
 
 import { Cat, Layers, Package } from 'lucide-react';
 import { LogoBrand } from './LogoBrand';
-import { PetzoneBlock } from './PetzoneBlock';
+import { PlannBlock } from './PlannBlock';
 
-export function ProjectsContent() {
+export function PlannContent() {
     return (
         <>
             <div className="p-8 flex flex-col items-center">
@@ -15,7 +15,7 @@ export function ProjectsContent() {
                                     <Cat />
                                     <div className='flex flex-col gap-8'>
                                         <div className='flex flex-col gap-2'>
-                                            <h3 className='text-xl font-semibold'>Petzone</h3>
+                                            <h3 className='text-xl font-semibold'>Plann.io</h3>
                                             <p className='opacity-70 text-sm text-semibold'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, repudiandae.</p>
                                         </div>
                                     </div>
@@ -70,9 +70,9 @@ export function ProjectsContent() {
                                 <p className='opacity-70 text-sm text-semibold'>Lorem ipsum dolor sit amet consectetur.</p>
                             </div>
                         </div>
-                        <div className='absolute h-[400px] w-[710px] rounded-lg left-7 bottom-10 shadow-lg bg-white flex gap-9'>
+                        <div className='absolute h-[400px] w-[710px] rounded-xl left-7 bottom-10 shadow-lg bg-white flex gap-9'>
                             {/* <Image src={dashboardPagePetzone} alt='Home Page Petzone' fill className='rounded-lg' /> */}
-                            <PetzoneBlock />
+                            <PlannBlock />
                         </div>
                     </div>
                 </div>
