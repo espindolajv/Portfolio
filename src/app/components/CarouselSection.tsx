@@ -28,7 +28,7 @@ export function CarouselSection() {
                 <h3 className="text-xl italic opacity-70">My projects</h3>
             </div>
 
-            <div className="flex flex-col gap-3 items-center justify-center">
+            <div className="flex flex-col gap-3 items-center justify-center w-full overflow-x-hidden">
                 <Carousel
                     opts={{
                         align: "center",
