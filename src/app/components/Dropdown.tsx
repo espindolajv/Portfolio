@@ -12,10 +12,10 @@ export function DropDown({ children, style, height, title, subtitle, width }: { 
         <div className="flex flex-col gap-4">
             <div className="flex justify-start items-center gap-2 relative">
                 <button
-                    className={`flex items-center text-xl font-bold text-start gap-4 ${open ? 'justify-between w-full' : `justify-start ${width}`} duration-300 transition-all`}
+                    className={`flex items-center sm:text-xl text-lg font-bold text-start gap-4 ${open ? 'justify-between w-full' : `justify-start ${width}`} duration-300 transition-all`}
                     onClick={handleOpen}
                 >
-                    <h2 className="font-semibold">{title} / <span className="text-xl italic opacity-70 font-medium">{subtitle}</span></h2>
+                    <h2 className="font-semibold">{title} / <span className="sm:text-xl text-lg italic opacity-70 font-medium">{subtitle}</span></h2>
                     
                     <TiArrowSortedDown className={`${open ? 'rotate-0 ' : '-rotate-90'} duration-300`} />
                 </button>

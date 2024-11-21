@@ -21,8 +21,10 @@ export default function Home() {
     >
       <main className={`duration-300`}>
         <HomeContent />
-        <div className="flex flex-col gap-32">
-          <TechSection />
+        <div className="flex flex-col xl:gap-32 gap-20">
+          <div className="w-full hidden sm:flex">
+            <TechSection />
+          </div>
           <CarouselSection />
           <AboutMeSection />
         </div>

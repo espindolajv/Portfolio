@@ -1,12 +1,13 @@
 
-import { Cat, Layers, Package } from 'lucide-react';
+import { Cat, ExternalLink, Layers, Package } from 'lucide-react';
 import { LogoBrand } from './LogoBrand';
 import { PetzoneBlock } from './PetzoneBlock';
+import Link from 'next/link';
 
 export function PetzoneContent() {
     return (
         <>
-            <div className="p-8 flex flex-col items-center">
+            <div className="p-8 sm:flex hidden flex-col items-center sm:scale-75 lg:scale-100">
                 <div className="h-[600px] w-[1050px] flex items-center justify-center gap-3">
                     <div className="w-2/3 h-full flex flex-col gap-3">
                         <div className="h-1/2 flex gap-3">
@@ -82,6 +83,26 @@ export function PetzoneContent() {
                     <input type="checkbox" className='sr-only peer' id='check' />
                     <span className='h-6 w-6 rounded-full bg-blue-600 absolute top-1.5 left-1.5 transition-all peer-checked:bg-red-500 peer-checked:left-12 duration-300'></span>
                 </label>
+            </div>
+
+            <div className='p-8 flex justify-center items-center w-full sm:hidden'>
+                <Link
+                    href={'https://github.com/luizjoliverceub/Petzone/tree/alter-pid-4'}
+                    className='h-[500px] w-80 bg-glass rounded-xl p-8 flex overflow-hidden relative hover:scale-110 transition-all duration-300'
+                >
+                    <div className='flex flex-col gap-4'>
+                        <div className='w-full flex flex-col gap-2'>
+                            <h3 className='font-semibold text-2xl'>Petzone</h3>
+                            <p className='text-sm font-semibold opacity-85'>Software desenvolvido com o objetivo de facilitar os cuidados médicos do seu amiguinho!</p>
+                        </div>
+                    </div>
+                    <div className='absolute h-[400px] w-[710px] rounded-lg left-8 -bottom-16 shadow-lg bg-white flex gap-9'>
+                        {/* <Image src={dashboardPagePetzone} alt='Home Page Petzone' fill className='rounded-lg' /> */}
+                        <PetzoneBlock />
+                    </div>
+
+                    <ExternalLink className='absolute top-5 right-5 size-[18px]' />
+                </Link>
             </div>
         </>
     )

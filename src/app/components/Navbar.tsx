@@ -27,7 +27,7 @@ export function Navbar() {
     }, [])
 
     return (
-        <nav className={`${classScroll} flex px-2 py-2 font-medium justify-end items-center gap-3 rounded-full fixed z-50 duration-300`}>
+        <nav className={`${classScroll} flex px-2 py-2 font-medium items-center sm:gap-3 gap-1 rounded-full fixed z-50 duration-300 text-sm sm:text-base`}>
             <Link href={'#home-section'} className={`px-3 py-1 ${color ? 'hover:bg-white/70' : 'hover:bg-black/40'} rounded-full duration-300`}>
                 Início
             </Link>
@@ -46,8 +46,8 @@ export function Navbar() {
             >
                 {
                     color ?
-                        <Sun className="size-5 animate-fade-in" strokeWidth={2.8} /> :
-                        <Moon className="size-5 animate-fade-in" strokeWidth={2.8} />
+                        <Sun className="lg:size-5 size-4 animate-fade-in" strokeWidth={2.8} /> :
+                        <Moon className="lg:size-5 size-4 animate-fade-in" strokeWidth={2.8} />
                 }
             </button>
         </nav>

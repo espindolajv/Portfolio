@@ -17,10 +17,10 @@ export function TechSection() {
                 <CarouselContent>
 
                     {stacks.map((item, index) => (
-                        <CarouselItem key={index} className="basis-1/12 relative group flex flex-col justify-center items-center"
+                        <CarouselItem key={index} className="xl:basis-1/12 basis-1/4 relative group flex flex-col justify-center items-center"
                             aria-label={item.name}
                         >
-                            <div className="text-5xl rounded-xl p-2 h-20 w-20 flex items-center justify-center opacity-35 group-hover:opacity-100 duration-300 transition-transform transform group-hover:scale-125">
+                            <div className="sm:text-5xl text-4xl rounded-xl p-2 h-20 w-20 flex items-center justify-center opacity-35 group-hover:opacity-100 duration-300 transition-transform transform group-hover:scale-125">
                                 {item.logo}
                             </div>
 

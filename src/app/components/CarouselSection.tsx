@@ -22,10 +22,10 @@ export function CarouselSection() {
     }, [api]);
 
     return (
-        <section className="w-full p-8 flex flex-col items-center gap-20 relative py-32" id='project-section'>
+        <section className="w-full p-8 flex flex-col items-center justify-center gap-20 relative xl:py-32 py-12" id='project-section'>
             <div className="flex flex-col items-center">
-                <h2 className="font-semibold text-3xl">Meus Projetos</h2>
-                <h3 className="text-xl italic opacity-70">My projects</h3>
+                <h2 className="font-semibold sm:text-3xl text-2xl">Meus Projetos</h2>
+                <h3 className="sm:text-xl text-lg italic opacity-70">My projects</h3>
             </div>
 
             <div className="flex flex-col gap-3 items-center justify-center w-full overflow-x-hidden">
@@ -36,14 +36,15 @@ export function CarouselSection() {
                     }}
                     plugins={[Autoplay({ delay: 10000 })]}
                     setApi={setApi}
+                    className="xl:max-w-[1300px]"
                 >
                     <CarouselContent>
 
-                        <CarouselItem >
+                        <CarouselItem>
                             <PetzoneContent />
                         </CarouselItem>
 
-                        <CarouselItem className="mx-32">
+                        <CarouselItem>
                             <PlannContent />
                         </CarouselItem>
 
@@ -54,10 +55,10 @@ export function CarouselSection() {
                     </CarouselContent>
 
                     <CarouselPrevious
-                        className="size-10 bg-glass border-transparent absolute top-1/2 left-1/3 hover:bg-white/50"
+                        className="size-10 bg-glass border-transparent absolute top-1/2 left-10 hover:bg-white/50 sm:flex hidden"
                     />
                     <CarouselNext
-                        className="size-10 bg-glass border-transparent absolute top-1/2 right-1/3 hover:bg-white/50"
+                        className="size-10 bg-glass border-transparent absolute top-1/2 right-10 hover:bg-white/50 sm:flex hidden"
                     />
                 </Carousel>
 
