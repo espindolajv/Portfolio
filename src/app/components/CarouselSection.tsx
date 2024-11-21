@@ -24,8 +24,8 @@ export function CarouselSection() {
     return (
         <section className="w-full p-8 flex flex-col items-center justify-center gap-20 relative xl:py-32 py-12" id='project-section'>
             <div className="flex flex-col items-center">
-                <h2 className="font-semibold sm:text-3xl text-2xl">Meus Projetos</h2>
-                <h3 className="sm:text-xl text-lg italic opacity-70">My projects</h3>
+                <h2 className="font-semibold sm:text-3xl text-2xl">Principais Projetos</h2>
+                <h3 className="sm:text-xl text-lg italic opacity-70">Main projects</h3>
             </div>
 
             <div className="flex flex-col gap-3 items-center justify-center w-full overflow-x-hidden">
@@ -48,10 +48,6 @@ export function CarouselSection() {
                             <PlannContent />
                         </CarouselItem>
 
-                        <CarouselItem >
-                            <PetzoneContent />
-                        </CarouselItem>
-
                     </CarouselContent>
 
                     <CarouselPrevious
@@ -65,7 +61,7 @@ export function CarouselSection() {
                 <div className="flex gap-4">
                     <Circle className={`size-3.5 ${current === 1 ? '' : 'opacity-25'} duration-300`} strokeWidth={3}/>
                     <Circle className={`size-3.5 ${current === 2 ? '' : 'opacity-25'} duration-300`} strokeWidth={3}/>
-                    <Circle className={`size-3.5 ${current === 3 ? '' : 'opacity-25'} duration-300`} strokeWidth={3}/>                    
+                    {/* <Circle className={`size-3.5 ${current === 3 ? '' : 'opacity-25'} duration-300`} strokeWidth={3}/>                     */}
                 </div>
             </div>
 

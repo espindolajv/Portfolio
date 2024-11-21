@@ -1,8 +1,9 @@
 import { BiLogoTypescript } from "react-icons/bi";
 import { BsStripe } from "react-icons/bs";
-import { FaNodeJs, FaReact, FaGitAlt, FaDocker, FaFigma } from "react-icons/fa";
+import { FaNodeJs, FaReact, FaGitAlt, FaDocker, FaFigma, FaAngular } from "react-icons/fa";
+import { IoLogoFirebase } from "react-icons/io5";
 import { RiJavascriptFill, RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiPostgresql, SiPrisma, SiPusher, SiReactquery, SiShadcnui, SiZod } from "react-icons/si";
+import { SiCsharp, SiPostgresql, SiPrisma, SiPusher, SiReactquery, SiShadcnui, SiZod } from "react-icons/si";
 
 export const stacks = [
     {
@@ -68,7 +69,19 @@ export const stacks = [
     {
         name: 'Pusher',
         logo: <SiPusher />
-    }
+    },
+    {
+        name: 'Angular',
+        logo: <FaAngular />
+    },
+    {
+        name: 'C#',
+        logo: <SiCsharp />
+    },
+    {
+        name: 'FireBase',
+        logo: <IoLogoFirebase />
+    },
 
 ]
 

@@ -27,7 +27,7 @@ export function Navbar() {
     }, [])
 
     return (
-        <nav className={`${classScroll} flex px-2 py-2 font-medium items-center sm:gap-3 gap-1 rounded-full fixed z-50 duration-300 text-sm sm:text-base`}>
+        <nav className={`${classScroll} flex sm:p-2 p-1.5 font-medium items-center sm:gap-3 gap-0 rounded-full fixed z-50 duration-300 text-sm sm:text-base`}>
             <Link href={'#home-section'} className={`px-3 py-1 ${color ? 'hover:bg-white/70' : 'hover:bg-black/40'} rounded-full duration-300`}>
                 Início
             </Link>
@@ -37,7 +37,7 @@ export function Navbar() {
             <Link href={'#aboutme-section'} className={`px-3 py-1 ${color ? 'hover:bg-white/70' : 'hover:bg-black/40'} rounded-full duration-300`}>
                 Sobre mim
             </Link>
-            <Link href={''} className={`px-3 py-1 ${color ? 'hover:bg-white/70' : 'hover:bg-black/40'} rounded-full duration-300`}>
+            <Link href={'#contact-section'} className={`px-3 py-1 ${color ? 'hover:bg-white/70' : 'hover:bg-black/40'} rounded-full duration-300`}>
                 Contato
             </Link>
             <button

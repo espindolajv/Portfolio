@@ -6,6 +6,8 @@ import { TechSection } from "./components/TechSection";
 import { AboutMeSection } from "./components/AboutMeSection";
 import { Schibsted_Grotesk } from 'next/font/google';
 import { useMyContext } from "@/context/context";
+import { ContactSection } from "./components/ContactSection";
+import { Footer } from "./components/Footer";
 
 const grotesk = Schibsted_Grotesk({
   subsets: ['latin'],
@@ -27,6 +29,10 @@ export default function Home() {
           </div>
           <CarouselSection />
           <AboutMeSection />
+          <div className="flex flex-col gap-0">
+            <ContactSection />
+            <Footer />
+          </div>
         </div>
       </main>
     </body>
