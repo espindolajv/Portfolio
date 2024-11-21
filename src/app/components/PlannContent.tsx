@@ -1,5 +1,5 @@
 
-import { BookCheck, Cat, ExternalLink, Layers, Package } from 'lucide-react';
+import { BookCheck, ExternalLink, Layers, Package } from 'lucide-react';
 import { LogoBrand } from './LogoBrand';
 import { PlannBlock } from './PlannBlock';
 import Link from 'next/link';

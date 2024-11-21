@@ -3,7 +3,7 @@ import "./globals.css";
 import { ContextProvider } from "@/context/context";
 
 export const metadata: Metadata = {
-  title: "João Victor",
+  title: "João Victor | Portfolio",
   description: "Desenvolvedor Fullstack",
 };
 
