@@ -28,12 +28,14 @@ export function HomeContent() {
                         <p className="lg:text-xl text-base">Desenvolvedor full-stack, com uma forte paixão por tecnologia e inovação. Ao longo da minha formação, desenvolvi habilidades sólidas tanto no front-end quanto no back-end.</p>
 
                         <div className="w-full flex gap-4">
-                            <button
+                            <a
+                                href='./João Victor Espindola Macedo - CV.pdf'
+                                download
                                 className="sm:h-[68px] h-[50px] sm:w-[68px] w-[50px] sm:hover:w-[155px] bg-glass sm:p-4 p-2 rounded-full flex gap-2 items-center font-semibold group transition-all duration-300 relative text-nowrap"
                             >
                                 <MdOutlineFileDownload className="text-[34px] group-hover:animate-bounce" />
                                 <span className="absolute left-[58px] group-hover:text-lg text-[0px] duration-300 hidden sm:flex">Baixar CV</span>
-                            </button>
+                            </a>
                             <Link
                                 href={'https://www.linkedin.com/in/joaoespmacedo/'}
                                 target="_blank"

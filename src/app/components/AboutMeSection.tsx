@@ -33,7 +33,14 @@ export function AboutMeSection() {
 
 
                     <div className="flex w-full">
-                        <button className="flex gap-1 justify-center items-center w-full sm:w-auto bg-glass px-4 py-2 text-lg font-semibold rounded-lg hover:bg-white/30 hover:scale-110 duration-300 hover:z-40 group"><MdOutlineFileDownload className="text-2xl group-hover:animate-bounce duration-300" />Baixar CV</button>
+                        <a
+                            href='./João Macedo - CV.pdf'
+                            download
+                            className="flex gap-1 justify-center items-center w-full sm:w-auto bg-glass px-4 py-2 text-lg font-semibold rounded-lg hover:bg-white/30 hover:scale-110 duration-300 hover:z-40 group"
+                        >
+                            <MdOutlineFileDownload className="text-2xl group-hover:animate-bounce duration-300" />
+                            Baixar CV
+                        </a>
                     </div>
                 </div>
             </div>
