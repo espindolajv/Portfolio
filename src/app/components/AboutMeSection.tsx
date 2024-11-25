@@ -34,8 +34,7 @@ export function AboutMeSection() {
 
                     <div className="flex w-full">
                         <a
-                            href='./João Macedo - CV.pdf'
-                            download
+                            href='https://drive.google.com/uc?export=download&id=1n20LCBWYWo-vViOZGPy-ORZsutz9oQF_'
                             className="flex gap-1 justify-center items-center w-full sm:w-auto bg-glass px-4 py-2 text-lg font-semibold rounded-lg hover:bg-white/30 hover:scale-110 duration-300 hover:z-40 group"
                         >
                             <MdOutlineFileDownload className="text-2xl group-hover:animate-bounce duration-300" />

@@ -29,8 +29,7 @@ export function HomeContent() {
 
                         <div className="w-full flex gap-4">
                             <a
-                                href='./João Victor Espindola Macedo - CV.pdf'
-                                download
+                                href='https://drive.google.com/uc?export=download&id=1n20LCBWYWo-vViOZGPy-ORZsutz9oQF_'
                                 className="sm:h-[68px] h-[50px] sm:w-[68px] w-[50px] sm:hover:w-[155px] bg-glass sm:p-4 p-2 rounded-full flex gap-2 items-center font-semibold group transition-all duration-300 relative text-nowrap"
                             >
                                 <MdOutlineFileDownload className="text-[34px] group-hover:animate-bounce" />
