@@ -47,8 +47,8 @@ export function AboutMeSection() {
             <div className="flex flex-col gap-2 justify-center items-center w-full">
                 <div className="w-full px-2">
                     <DropDown height="200" title="Carreira" subtitle='Career' style="" width="w-[350px]">
-                        <div className="w-full flex flex-col 2xl:flex-row gap-6">
-                            <div className="2xl:w-1/2 w-full bg-glass rounded-2xl p-7 flex flex-col justify-start gap-3 relative hover:scale-110 duration-300 hover:z-40">
+                        <div className="w-full flex flex-col gap-6">
+                            <div className="w-full bg-glass rounded-2xl p-7 flex flex-col justify-start gap-3 relative hover:scale-110 duration-300 hover:z-40">
                                 <div className="w-full">
                                     <div className="w-full flex justify-between gap-2">
                                         <h3 className="sm:text-lg text-base font-bold">Estagiário de TI</h3>
@@ -70,16 +70,16 @@ export function AboutMeSection() {
                                 </div>
                             </div>
 
-                            <div className="2xl:w-1/2 w-full bg-glass rounded-2xl p-7 flex flex-col justify-start gap-3 relative hover:scale-110 duration-300 hover:z-40">
+                            <div className="w-full bg-glass rounded-2xl p-7 flex flex-col justify-start gap-3 relative hover:scale-110 duration-300 hover:z-40">
                                 <div className="w-full">
                                     <div className="w-full flex justify-between">
-                                        <h3 className="sm:text-lg text-base font-bold">Freelancer</h3>
+                                        <h3 className="sm:text-lg text-base font-bold">Desenvolvedor FullStack</h3>
                                     </div>
-                                    <p className="sm:text-base text-sm font-semibold opacity-80">Desenvolvedor Web</p>
+                                    <p className="sm:text-base text-sm font-semibold opacity-80">MV Gois</p>
                                 </div>
                                 <div className="flex gap-2">
                                     <div className={`${color ? 'bg-zinc-200' : 'bg-black/50'} p-2 rounded-md`}>
-                                        <p className="sm:text-base text-sm font-semibold">Fev/24</p>
+                                        <p className="sm:text-base text-sm font-semibold">Dez/24</p>
                                     </div>
 
                                     <div className={`${color ? 'bg-zinc-200' : 'bg-black/50'} p-2 rounded-md`}>
@@ -88,7 +88,16 @@ export function AboutMeSection() {
                                 </div>
 
                                 <div className="w-full sm:text-base text-sm opacity-80 font-semibold">
-                                    <p>Freelancer em tecnologias como JavaScript, React, Angular Node.js, TypeScript e C#, desenvolvendo aplicações web escaláveis, integração de APIs, e design de interfaces focadas em UX/UI.</p>
+                                    <p>
+                                        Atuo no desenvolvimento de aplicações web e mobile, contribuindo diretamente para a criação de funcionalidades e melhorias que otimizam a experiência do usuário e a eficiência dos projetos. Entre minhas principais entregas, destaco:
+                                    </p>
+                                    <ul className="list-disc pl-5 mt-2">
+                                        <li>Implementação de funcionalidades com React, React Native, Node.js, Nest.js, Next.js e Vite;</li>
+                                        <li>Otimização de performance e escalabilidade em aplicações fullstack;</li>
+                                        <li>Refatoração de código legado, elevando a legibilidade e reduzindo a ocorrência de bugs;</li>
+                                        <li>Criação de testes automatizados com Jest, Vitest e Cypress, assegurando qualidade e confiabilidade;</li>
+                                        <li>Participação ativa em times multidisciplinares, alinhando soluções técnicas aos objetivos do negócio.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -108,7 +117,7 @@ export function AboutMeSection() {
                                 </div>
                                 <div className="flex gap-2">
                                     <div className={`${color ? 'bg-zinc-200' : 'bg-black/50'} p-2 rounded-md`}>
-                                        <p className="sm:text-base text-sm font-semibold">Ago/25</p>
+                                        <p className="sm:text-base text-sm font-semibold">Jul/25</p>
                                     </div>
 
                                     <div className={`${color ? 'bg-zinc-200' : 'bg-black/50'} p-2 rounded-md`}>
