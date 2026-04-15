@@ -1,72 +1,27 @@
 'use client'
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
+import Link from "next/link";
 import { SectionHeader } from "./SectionHeader";
 import { Reveal } from "./Reveal";
 import { MdArrowOutward } from "react-icons/md";
 import { useMyContext } from "@/context/context";
+import { projects as allProjects, Project } from "../../projects/data";
 
-import petzoneHome from "../../../../public/Petzone_Home.png";
-import petzoneDashboard from "../../../../public/Petzone_Dashboard.png";
-import petzoneConsults from "../../../../public/Petzone_Consults.png";
-import petzoneVetProfile from "../../../../public/Petzone_VetProfile.png";
-
-type Project = {
-  index: string;
-  year: string;
-  title: string;
-  taglineKey: string;
-  descKey: string;
-  stack: string[];
-  cover: StaticImageData | null;
-  gallery: StaticImageData[];
-  href: string;
-  badgeKey?: string;
-  typeKey?: string;
-};
+function contextKey(c: Project["contextType"]) {
+  return c === "freelance"
+    ? "work.typeFreelance"
+    : c === "personal"
+      ? "work.typePersonal"
+      : "work.typeAcademic";
+}
 
 export function Work() {
   const { t } = useMyContext();
-
-  const projects: Project[] = [
-    {
-      index: "01",
-      year: "2025",
-      title: "Matchmania",
-      taglineKey: "work.p3Tagline",
-      descKey: "work.p3Desc",
-      stack: ["React Native", "TypeScript", "Node.js", "NestJS", "PostgreSQL"],
-      cover: null,
-      gallery: [],
-      href: "https://play.google.com/store/apps/details?id=com.matchmania.matchmania&hl=pt_BR",
-      badgeKey: "work.storeBadge",
-      typeKey: "work.typeFreelance",
-    },
-    {
-      index: "02",
-      year: "2024",
-      title: "Plann",
-      taglineKey: "work.p2Tagline",
-      descKey: "work.p2Desc",
-      stack: ["Next.js", "React", "TypeScript", "Tailwind"],
-      cover: null,
-      gallery: [],
-      href: "#",
-      typeKey: "work.typePersonal",
-    },
-    {
-      index: "03",
-      year: "2024",
-      title: "Petzone",
-      taglineKey: "work.p1Tagline",
-      descKey: "work.p1Desc",
-      stack: ["Next.js", "TypeScript", "Node.js", "Tailwind", "PostgreSQL"],
-      cover: petzoneHome,
-      gallery: [petzoneDashboard, petzoneConsults, petzoneVetProfile],
-      href: "#",
-      typeKey: "work.typeAcademic",
-    },
-  ];
+  const homeOrder = ["matchmania", "petzone", "evolue"];
+  const projects = homeOrder
+    .map((id) => allProjects.find((p) => p.id === id))
+    .filter((p): p is Project => Boolean(p));
 
   return (
     <section
@@ -103,18 +58,16 @@ export function Work() {
                     >
                       {p.year}
                     </span>
-                    {p.typeKey && (
-                      <span
-                        className="font-mono-ui text-[10px] tracking-[0.18em] uppercase px-2 py-0.5 rounded-full"
-                        style={{
-                          border: "1px solid var(--border)",
-                          color: "var(--muted)",
-                          background: "var(--accent-soft)",
-                        }}
-                      >
-                        {t(p.typeKey)}
-                      </span>
-                    )}
+                    <span
+                      className="font-mono-ui text-[10px] tracking-[0.18em] uppercase px-2 py-0.5 rounded-full"
+                      style={{
+                        border: "1px solid var(--border)",
+                        color: "var(--muted)",
+                        background: "var(--accent-soft)",
+                      }}
+                    >
+                      {t(contextKey(p.contextType))}
+                    </span>
                     {p.badgeKey && (
                       <span
                         className="font-mono-ui text-[10px] tracking-[0.18em] uppercase px-2 py-0.5 rounded-full"
@@ -124,6 +77,27 @@ export function Work() {
                         }}
                       >
                         ▸ {t(p.badgeKey)}
+                      </span>
+                    )}
+                    {typeof p.progress === "number" && (
+                      <span
+                        className="font-mono-ui text-[10px] tracking-[0.18em] uppercase px-2 py-0.5 rounded-full inline-flex items-center gap-1.5"
+                        style={{
+                          border: "1px solid var(--border)",
+                          color: "var(--muted)",
+                        }}
+                      >
+                        <span className="relative flex h-1.5 w-1.5">
+                          <span
+                            className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60"
+                            style={{ background: "var(--accent)" }}
+                          />
+                          <span
+                            className="relative inline-flex rounded-full h-1.5 w-1.5"
+                            style={{ background: "var(--accent)" }}
+                          />
+                        </span>
+                        {t("work.inProgress")} · {p.progress}%
                       </span>
                     )}
                   </div>
@@ -184,6 +158,7 @@ export function Work() {
                       className="relative w-full aspect-[5/3.4] rounded-2xl overflow-hidden flex items-center justify-center"
                       style={{
                         background:
+                          p.gradient ??
                           "linear-gradient(135deg, var(--accent-soft), transparent 60%), var(--surface)",
                         border: "1px solid var(--border)",
                       }}
@@ -194,6 +169,15 @@ export function Work() {
                       >
                         {p.title}
                       </span>
+                    </div>
+                  )}
+
+                  {typeof p.progress === "number" && (
+                    <div className="mt-3 h-[2px] w-full" style={{ background: "var(--border)" }}>
+                      <div
+                        className="h-full transition-[width] duration-700"
+                        style={{ width: `${p.progress}%`, background: "var(--accent)" }}
+                      />
                     </div>
                   )}
 
@@ -220,6 +204,28 @@ export function Work() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal>
+          <div className="mt-20 md:mt-28 pt-10 border-t hairline flex flex-col md:flex-row md:items-baseline md:justify-between gap-6">
+            <div
+              className="font-mono-ui text-[11px] tracking-[0.22em] uppercase"
+              style={{ color: "var(--muted)" }}
+            >
+              {String(allProjects.length).padStart(2, "0")} / {t("projects.count")}
+            </div>
+            <Link
+              href="/projects"
+              className="group inline-flex items-center gap-3 px-5 py-3 rounded-full text-sm font-medium transition-all self-start md:self-auto"
+              style={{
+                border: "1px solid var(--text)",
+                color: "var(--text)",
+              }}
+            >
+              {t("work.viewAll")}
+              <MdArrowOutward className="text-lg transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -42,3 +42,4 @@ next-env.d.ts
 # playwright / dev screenshots
 .playwright-mcp/
 /*.png
+.claude/
