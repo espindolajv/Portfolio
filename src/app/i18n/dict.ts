@@ -82,6 +82,10 @@ export const dict = {
             noteMaint: 'manutenção', noteQueues: 'filas & workers', noteIot: 'IoT · pub/sub',
             noteStream: 'event streaming', noteNosql: 'NoSQL', noteAws: 'S3 · EC2 · Lambda',
             noteLlm: 'OpenAI · Anthropic', noteRag: 'pipelines & retrieval', notePg: 'pgvector',
+            noteOrms: 'Prisma · Drizzle · TypeORM',
+            noteIos: 'iOS nativo',
+            noteCicd: 'pipelines & automação',
+            noteCf: 'DNS · CDN · Workers',
         },
         about: {
             intro: '// Intro',
@@ -199,6 +203,10 @@ export const dict = {
             noteMaint: 'maintenance', noteQueues: 'queues & workers', noteIot: 'IoT · pub/sub',
             noteStream: 'event streaming', noteNosql: 'NoSQL', noteAws: 'S3 · EC2 · Lambda',
             noteLlm: 'OpenAI · Anthropic', noteRag: 'pipelines & retrieval', notePg: 'pgvector',
+            noteOrms: 'Prisma · Drizzle · TypeORM',
+            noteIos: 'native iOS',
+            noteCicd: 'pipelines & automation',
+            noteCf: 'DNS · CDN · Workers',
         },
         about: {
             intro: '// Intro',
@@ -316,6 +324,10 @@ export const dict = {
             noteMaint: 'mantenimiento', noteQueues: 'colas y workers', noteIot: 'IoT · pub/sub',
             noteStream: 'event streaming', noteNosql: 'NoSQL', noteAws: 'S3 · EC2 · Lambda',
             noteLlm: 'OpenAI · Anthropic', noteRag: 'pipelines y retrieval', notePg: 'pgvector',
+            noteOrms: 'Prisma · Drizzle · TypeORM',
+            noteIos: 'iOS nativo',
+            noteCicd: 'pipelines y automatización',
+            noteCf: 'DNS · CDN · Workers',
         },
         about: {
             intro: '// Intro',

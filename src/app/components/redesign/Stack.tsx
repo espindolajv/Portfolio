@@ -30,6 +30,7 @@ const groups: {
       { name: "Next.js", level: "Daily" },
       { name: "TypeScript", level: "Daily" },
       { name: "React Native", level: "Projects" },
+      { name: "Swift", level: "Exploring", noteKey: "stack.noteIos" },
       { name: "Tailwind CSS", level: "Daily" },
       { name: "Angular", level: "Projects", noteKey: "stack.noteMaint" },
       { name: "Vue.js", level: "Exploring" },
@@ -44,7 +45,6 @@ const groups: {
       { name: "NestJS", level: "Daily" },
       { name: "Fastify", level: "Projects" },
       { name: "Express", level: "Projects" },
-      { name: "C# / .NET", level: "Projects" },
       { name: "REST / OpenAPI", level: "Daily" },
       { name: "WebSockets", level: "Projects" },
       { name: "RabbitMQ", level: "Projects", noteKey: "stack.noteQueues" },
@@ -59,7 +59,7 @@ const groups: {
     items: [
       { name: "PostgreSQL", level: "Daily" },
       { name: "MongoDB", level: "Projects", noteKey: "stack.noteNosql" },
-      { name: "Prisma", level: "Daily" },
+      { name: "ORMs", level: "Daily", noteKey: "stack.noteOrms" },
       { name: "Redis", level: "Projects" },
       { name: "Firebase", level: "Projects" },
     ],
@@ -71,8 +71,10 @@ const groups: {
     items: [
       { name: "Docker", level: "Daily" },
       { name: "AWS", level: "Projects", noteKey: "stack.noteAws" },
+      { name: "CI/CD", level: "Daily", noteKey: "stack.noteCicd" },
       { name: "GitHub Actions", level: "Daily" },
       { name: "Vercel", level: "Daily" },
+      { name: "Cloudflare", level: "Projects", noteKey: "stack.noteCf" },
       { name: "Linux", level: "Projects" },
     ],
   },
@@ -240,7 +242,7 @@ export function Stack() {
                     {visible.map((item, idx) => (
                       <li
                         key={item.name}
-                        className="group relative grid grid-cols-12 gap-4 py-3.5 items-baseline border-b hairline last:border-b-0 transition-colors cursor-default"
+                        className="group relative grid grid-cols-12 gap-4 py-3.5 pl-4 items-baseline border-b hairline last:border-b-0 transition-colors cursor-default"
                       >
                         <span
                           className="absolute left-0 top-0 bottom-0 w-[2px] opacity-0 group-hover:opacity-100 transition-opacity"
