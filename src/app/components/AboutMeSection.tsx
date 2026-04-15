@@ -23,7 +23,7 @@ export function AboutMeSection() {
 
 
                     <p className="sm:text-lg text-base opacity-100">
-                        Desenvolvedor full-stack de 21 anos, prestes a me formar em Análise e Desenvolvimento de Sistemas, com uma forte paixão por tecnologia e inovação. Ao longo da minha formação, desenvolvi habilidades sólidas tanto no front-end quanto no back-end, criando interfaces de usuário dinâmicas e intuitivas com <strong>React, Angular, JavaScript, TypeScript, Next.js, Sass e Tailwind CSS</strong>, além de construir soluções robustas em <strong>Node.js e C#</strong>.
+                        Desenvolvedor full-stack de 23 anos, formado em Análise e Desenvolvimento de Sistemas pelo UniCEUB, com forte paixão por tecnologia e inovação. Ao longo da minha trajetória, desenvolvi habilidades sólidas tanto no front-end quanto no back-end, criando interfaces de usuário dinâmicas e intuitivas com <strong>React, React Native, Angular, JavaScript, TypeScript, Next.js, Sass e Tailwind CSS</strong>, além de construir soluções robustas com <strong>Node.js, Nest.js e C# (.NET)</strong>.
                     </p>
 
 
@@ -53,33 +53,64 @@ export function AboutMeSection() {
                                     <div className="w-full flex justify-between gap-2">
                                         <h3 className="sm:text-lg text-base font-bold">Estagiário de TI</h3>
                                     </div>
-                                    <p className="sm:text-base text-sm font-semibold opacity-80">ISCON</p>
+                                    <p className="sm:text-base text-sm font-semibold opacity-80">Instituto Superior CONAMAD</p>
                                 </div>
                                 <div className="flex gap-2">
                                     <div className={`${color ? 'bg-zinc-200' : 'bg-black/50'} p-2 rounded-md`}>
-                                        <p className="sm:text-base text-sm font-semibold">Jan/22</p>
+                                        <p className="sm:text-base text-sm font-semibold">Jan/23</p>
                                     </div>
 
                                     <div className={`${color ? 'bg-zinc-200' : 'bg-black/50'} p-2 rounded-md`}>
-                                        <p className="sm:text-base text-sm font-semibold">Fev/24</p>
+                                        <p className="sm:text-base text-sm font-semibold">Dez/23</p>
                                     </div>
                                 </div>
 
                                 <div className="w-full sm:text-base text-sm opacity-80 font-semibold">
-                                    <p>Responsável pelo desenvolvimento e manutenção de páginas web com HTML, CSS, JavaScript e React, além de APIs com TypeScript e C#. Possui experiência com tecnologias Microsoft e plataforma Azure. Especializado em design de interfaces e UX/UI utilizando Figma, e em fornecer suporte eficiente para melhorar a experiência do usuário.</p>
+                                    <p>Responsável pela manutenção de sites, sistemas, diretórios, planilhas e infraestrutura, administração de tecnologias Microsoft e utilização da plataforma Azure. Atuação em gerenciamento de processos, análise de dados e suporte ao usuário.</p>
                                 </div>
                             </div>
 
                             <div className="w-full bg-glass rounded-2xl p-7 flex flex-col justify-start gap-3 relative hover:scale-110 duration-300 hover:z-40">
                                 <div className="w-full">
                                     <div className="w-full flex justify-between">
-                                        <h3 className="sm:text-lg text-base font-bold">Desenvolvedor FullStack</h3>
+                                        <h3 className="sm:text-lg text-base font-bold">Desenvolvedor Fullstack Jr</h3>
                                     </div>
                                     <p className="sm:text-base text-sm font-semibold opacity-80">MV Gois</p>
                                 </div>
                                 <div className="flex gap-2">
                                     <div className={`${color ? 'bg-zinc-200' : 'bg-black/50'} p-2 rounded-md`}>
-                                        <p className="sm:text-base text-sm font-semibold">Dez/24</p>
+                                        <p className="sm:text-base text-sm font-semibold">Jun/24</p>
+                                    </div>
+
+                                    <div className={`${color ? 'bg-zinc-200' : 'bg-black/50'} p-2 rounded-md`}>
+                                        <p className="sm:text-base text-sm font-semibold">Jan/26</p>
+                                    </div>
+                                </div>
+
+                                <div className="w-full sm:text-base text-sm opacity-80 font-semibold">
+                                    <p>
+                                        Atuei no desenvolvimento de aplicações web e mobile, contribuindo diretamente para a criação de funcionalidades e melhorias que otimizam a experiência do usuário e a eficiência dos projetos. Entre minhas principais entregas, destaco:
+                                    </p>
+                                    <ul className="list-disc pl-5 mt-2">
+                                        <li>Implementação de funcionalidades com React, React Native, Node.js, Nest.js, Next.js e Vite;</li>
+                                        <li>Otimização de performance e escalabilidade em aplicações fullstack;</li>
+                                        <li>Refatoração de código legado, elevando a legibilidade e reduzindo a ocorrência de bugs;</li>
+                                        <li>Criação de testes automatizados com Jest, Vitest e Cypress, assegurando qualidade e confiabilidade;</li>
+                                        <li>Participação ativa em times multidisciplinares, alinhando soluções técnicas aos objetivos do negócio.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div className="w-full bg-glass rounded-2xl p-7 flex flex-col justify-start gap-3 relative hover:scale-110 duration-300 hover:z-40">
+                                <div className="w-full">
+                                    <div className="w-full flex justify-between">
+                                        <h3 className="sm:text-lg text-base font-bold">Desenvolvedor Fullstack Pleno</h3>
+                                    </div>
+                                    <p className="sm:text-base text-sm font-semibold opacity-80">MV Gois</p>
+                                </div>
+                                <div className="flex gap-2">
+                                    <div className={`${color ? 'bg-zinc-200' : 'bg-black/50'} p-2 rounded-md`}>
+                                        <p className="sm:text-base text-sm font-semibold">Fev/26</p>
                                     </div>
 
                                     <div className={`${color ? 'bg-zinc-200' : 'bg-black/50'} p-2 rounded-md`}>
@@ -89,14 +120,15 @@ export function AboutMeSection() {
 
                                 <div className="w-full sm:text-base text-sm opacity-80 font-semibold">
                                     <p>
-                                        Atuo no desenvolvimento de aplicações web e mobile, contribuindo diretamente para a criação de funcionalidades e melhorias que otimizam a experiência do usuário e a eficiência dos projetos. Entre minhas principais entregas, destaco:
+                                        Atuo de forma autônoma e estratégica no desenvolvimento e evolução de aplicações web e mobile, contribuindo diretamente para decisões de arquitetura, boas práticas e escalabilidade. Entre minhas principais responsabilidades e realizações:
                                     </p>
                                     <ul className="list-disc pl-5 mt-2">
-                                        <li>Implementação de funcionalidades com React, React Native, Node.js, Nest.js, Next.js e Vite;</li>
-                                        <li>Otimização de performance e escalabilidade em aplicações fullstack;</li>
-                                        <li>Refatoração de código legado, elevando a legibilidade e reduzindo a ocorrência de bugs;</li>
-                                        <li>Criação de testes automatizados com Jest, Vitest e Cypress, assegurando qualidade e confiabilidade;</li>
-                                        <li>Participação ativa em times multidisciplinares, alinhando soluções técnicas aos objetivos do negócio.</li>
+                                        <li>Definição e implementação de soluções escaláveis com React, React Native, Node.js, Nest.js, Next.js e Vite;</li>
+                                        <li>Participação ativa nas decisões de arquitetura e design de software, com foco em performance, segurança e manutenibilidade;</li>
+                                        <li>Orientação técnica e suporte a desenvolvedores juniores, promovendo boas práticas e padronização de código;</li>
+                                        <li>Integração de processos de CI/CD, testes automatizados e monitoramento para otimizar o ciclo de entrega;</li>
+                                        <li>Liderança em refatorações estruturais e evoluções tecnológicas, garantindo qualidade e longevidade dos projetos;</li>
+                                        <li>Colaboração com stakeholders e equipes multidisciplinares, alinhando prioridades técnicas e estratégicas.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -117,11 +149,11 @@ export function AboutMeSection() {
                                 </div>
                                 <div className="flex gap-2">
                                     <div className={`${color ? 'bg-zinc-200' : 'bg-black/50'} p-2 rounded-md`}>
-                                        <p className="sm:text-base text-sm font-semibold">Jul/25</p>
+                                        <p className="sm:text-base text-sm font-semibold">Dez/23</p>
                                     </div>
 
                                     <div className={`${color ? 'bg-zinc-200' : 'bg-black/50'} p-2 rounded-md`}>
-                                        <p className="sm:text-base text-sm font-semibold">CEUB</p>
+                                        <p className="sm:text-base text-sm font-semibold">UniCEUB</p>
                                     </div>
 
 

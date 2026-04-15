@@ -1,9 +1,10 @@
 import { BiLogoTypescript } from "react-icons/bi";
 import { BsStripe } from "react-icons/bs";
-import { FaNodeJs, FaReact, FaGitAlt, FaDocker, FaFigma, FaAngular } from "react-icons/fa";
+import { FaNodeJs, FaReact, FaGitAlt, FaDocker, FaFigma, FaAngular, FaAws, FaSass, FaVuejs } from "react-icons/fa";
 import { IoLogoFirebase } from "react-icons/io5";
 import { RiJavascriptFill, RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiCsharp, SiPostgresql, SiPrisma, SiPusher, SiReactquery, SiShadcnui, SiZod } from "react-icons/si";
+import { SiSharp, SiPostgresql, SiPrisma, SiPusher, SiReactquery, SiShadcnui, SiZod, SiNestjs, SiVite } from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
 
 export const stacks = [
     {
@@ -25,6 +26,22 @@ export const stacks = [
     {
         name: 'React',
         logo: <FaReact />
+    },
+    {
+        name: 'React Native',
+        logo: <TbBrandReactNative />
+    },
+    {
+        name: 'NestJS',
+        logo: <SiNestjs />
+    },
+    {
+        name: 'Vite',
+        logo: <SiVite />
+    },
+    {
+        name: 'Sass',
+        logo: <FaSass />
     },
     {
         name: 'React Query',
@@ -75,8 +92,16 @@ export const stacks = [
         logo: <FaAngular />
     },
     {
+        name: 'Vue.js',
+        logo: <FaVuejs />
+    },
+    {
         name: 'C#',
-        logo: <SiCsharp />
+        logo: <SiSharp />
+    },
+    {
+        name: 'AWS',
+        logo: <FaAws />
     },
     {
         name: 'FireBase',

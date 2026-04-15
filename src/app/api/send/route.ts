@@ -2,10 +2,15 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { EmailSend } from '@/app/components/EmailSend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const dynamic = 'force-dynamic';
 
 export async function POST(request: Request) {
     try {
+        const apiKey = process.env.RESEND_API_KEY;
+        if (!apiKey) {
+            return NextResponse.json({ message: 'RESEND_API_KEY não configurada.' }, { status: 500 });
+        }
+        const resend = new Resend(apiKey);
         const body = await request.json();
         const { from, subject } = body;
 

@@ -22,10 +22,10 @@ export function HomeContent() {
                 <div className="flex flex-col gap-12 xl:w-1/2 sm:w-full text-start justify-center items-center">
                     <div className="flex flex-col gap-3">
                         <h2 className="lg:text-4xl text-3xl font-semibold">Olá, sou João Victor Macedo e esse é meu Portfólio.</h2>
-                        <h3 className="lg:text-2xl text-xl italic">Desenvolvedor FullStack</h3>
+                        <h3 className="lg:text-2xl text-xl italic">Full Stack Developer | React Native | NestJS | Node.js | TypeScript</h3>
                     </div>
                     <div className="flex flex-col gap-5">
-                        <p className="lg:text-xl text-base">Desenvolvedor full-stack, com uma forte paixão por tecnologia e inovação. Ao longo da minha formação, desenvolvi habilidades sólidas tanto no front-end quanto no back-end.</p>
+                        <p className="lg:text-xl text-base">Desenvolvedor full-stack movido pela curiosidade e pela vontade de transformar ideias em soluções reais — da tela ao servidor. Atuo tanto no front-end quanto no back-end, entregando interfaces modernas e soluções robustas e escaláveis.</p>
 
                         <div className="w-full flex gap-4">
                             <a
