@@ -85,8 +85,8 @@ export function Hero() {
 
             <Reveal delay={320}>
               <div className="mt-10 flex flex-wrap items-center gap-3">
-                <a
-                  href="https://drive.google.com/uc?export=download&id=1n20LCBWYWo-vViOZGPy-ORZsutz9oQF_"
+                <Link
+                  href="/cv"
                   className="group inline-flex items-center gap-2 px-5 py-3 rounded-full text-sm font-medium transition-all"
                   style={{
                     background: "var(--text)",
@@ -95,7 +95,7 @@ export function Hero() {
                 >
                   {t("hero.cv")}
                   <MdArrowOutward className="text-lg transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </a>
+                </Link>
                 <Link
                   href="#contact"
                   className="group inline-flex items-center gap-2 px-5 py-3 rounded-full text-sm font-medium transition-colors"

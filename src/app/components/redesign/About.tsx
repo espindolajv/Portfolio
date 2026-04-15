@@ -1,5 +1,6 @@
 'use client'
 
+import Link from "next/link";
 import { SectionHeader } from "./SectionHeader";
 import { Reveal } from "./Reveal";
 import { MdOutlineFileDownload } from "react-icons/md";
@@ -71,14 +72,14 @@ export function About() {
               {t("about.paraB")}
             </p>
 
-            <a
-              href="https://drive.google.com/uc?export=download&id=1n20LCBWYWo-vViOZGPy-ORZsutz9oQF_"
+            <Link
+              href="/cv"
               className="mt-10 group inline-flex items-center gap-2 px-5 py-3 rounded-full text-sm font-medium transition-all"
               style={{ border: "1px solid var(--border)" }}
             >
               <MdOutlineFileDownload className="text-lg" />
               {t("about.cv")}
-            </a>
+            </Link>
           </Reveal>
 
           <div className="col-span-12 md:col-span-7 flex flex-col gap-16">
