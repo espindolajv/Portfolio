@@ -41,7 +41,7 @@ function ProjectCard({ p }: { p: Project }) {
         <a
             href={p.href}
             target={isExternal ? "_blank" : undefined}
-            rel={isExternal ? "noreferrer" : undefined}
+            rel={isExternal ? "noopener noreferrer" : undefined}
             className="group flex flex-col gap-5"
         >
             <div
@@ -241,7 +241,7 @@ export default function ProjectsPage() {
                         </Link>
                     </Reveal>
 
-                    <div className="grid grid-cols-12 gap-6 items-baseline pb-10 md:pb-12 border-b hairline">
+                    <div className="grid grid-cols-12 gap-y-6 md:gap-6 items-baseline pb-10 md:pb-12 border-b hairline">
                         <Reveal className="col-span-12 md:col-span-4 flex items-baseline gap-4">
                             <span
                                 className="font-mono-ui text-xs tracking-[0.22em] uppercase"

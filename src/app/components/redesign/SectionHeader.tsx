@@ -13,7 +13,7 @@ export function SectionHeader({
 }) {
   return (
     <Reveal>
-      <div className="grid grid-cols-12 gap-6 items-baseline pb-12 md:pb-20 border-b hairline">
+      <div className="grid grid-cols-12 gap-y-6 md:gap-6 items-baseline pb-12 md:pb-20 border-b hairline">
         <div className="col-span-12 md:col-span-4 flex items-baseline gap-4">
           <span
             className="font-mono-ui text-xs tracking-[0.2em] uppercase"

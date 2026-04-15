@@ -39,7 +39,7 @@ export function Work() {
         <div className="mt-16 md:mt-24 flex flex-col gap-28 md:gap-40">
           {projects.map((p, i) => (
             <Reveal key={p.title}>
-              <article className="grid grid-cols-12 gap-6 md:gap-10 items-start">
+              <article className="grid grid-cols-12 gap-y-6 md:gap-10 items-start">
                 <div
                   className={`col-span-12 md:col-span-5 ${
                     i % 2 === 1 ? "md:order-2 md:col-start-8" : ""
@@ -130,7 +130,7 @@ export function Work() {
                   <a
                     href={p.href}
                     target={p.href?.startsWith("http") ? "_blank" : undefined}
-                    rel={p.href?.startsWith("http") ? "noreferrer" : undefined}
+                    rel={p.href?.startsWith("http") ? "noopener noreferrer" : undefined}
                     className="group mt-8 inline-flex items-baseline gap-2 font-mono-ui text-xs tracking-[0.2em] uppercase"
                   >
                     <span className="link-underline">{t("work.viewCase")}</span>

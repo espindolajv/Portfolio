@@ -57,7 +57,7 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={220}>
-              <div className="mt-10 md:mt-16 grid grid-cols-12 gap-6">
+              <div className="mt-10 md:mt-16 grid grid-cols-12 gap-y-6 md:gap-6">
                 <div className="col-span-12 md:col-span-5">
                   <p
                     className="font-mono-ui text-xs tracking-[0.18em] uppercase"
@@ -111,6 +111,7 @@ export function Hero() {
                   <Link
                     href="https://www.linkedin.com/in/joaoespmacedo/"
                     target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="LinkedIn"
                     className="w-11 h-11 rounded-full flex items-center justify-center transition-colors"
                     style={{ border: "1px solid var(--border)" }}
@@ -120,6 +121,7 @@ export function Hero() {
                   <Link
                     href="https://github.com/espindolajv"
                     target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="GitHub"
                     className="w-11 h-11 rounded-full flex items-center justify-center transition-colors"
                     style={{ border: "1px solid var(--border)" }}

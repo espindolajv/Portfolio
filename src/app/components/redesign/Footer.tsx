@@ -10,7 +10,7 @@ export function Footer() {
   return (
     <footer className="w-full px-6 md:px-10 pt-16 pb-8 border-t hairline">
       <div className="max-w-[1440px] mx-auto">
-        <div className="grid grid-cols-12 gap-8 items-end pb-16">
+        <div className="grid grid-cols-12 gap-y-8 md:gap-8 items-end pb-16">
           <div className="col-span-12 md:col-span-8">
             <p
               className="font-mono-ui text-[11px] tracking-[0.22em] uppercase"
@@ -29,6 +29,7 @@ export function Footer() {
               <Link
                 href="https://www.linkedin.com/in/joaoespmacedo/"
                 target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="w-11 h-11 rounded-full flex items-center justify-center"
                 style={{ border: "1px solid var(--border)" }}
@@ -38,6 +39,7 @@ export function Footer() {
               <Link
                 href="https://github.com/espindolajv"
                 target="_blank"
+                rel="noopener noreferrer"
                 aria-label="GitHub"
                 className="w-11 h-11 rounded-full flex items-center justify-center"
                 style={{ border: "1px solid var(--border)" }}

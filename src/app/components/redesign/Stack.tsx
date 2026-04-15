@@ -133,7 +133,7 @@ export function Stack() {
 
         <Reveal>
           <div
-            className="mt-16 md:mt-20 grid grid-cols-12 gap-6 md:gap-10 items-start border-t hairline pt-10"
+            className="mt-16 md:mt-20 grid grid-cols-12 gap-y-6 md:gap-10 items-start border-t hairline pt-10"
           >
             <div className="col-span-12 md:col-span-4">
               <div
@@ -215,7 +215,7 @@ export function Stack() {
 
             return (
               <Reveal key={g.index}>
-                <div className="grid grid-cols-12 gap-6 md:gap-10 py-10 md:py-14 border-t hairline">
+                <div className="grid grid-cols-12 gap-y-6 md:gap-10 py-10 md:py-14 border-t hairline">
                   <div className="col-span-12 md:col-span-4">
                     <div className="flex items-baseline gap-3">
                       <span

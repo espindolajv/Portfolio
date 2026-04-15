@@ -50,7 +50,7 @@ export function About() {
           title={t("section.aboutTitle")}
         />
 
-        <div className="mt-16 md:mt-24 grid grid-cols-12 gap-10">
+        <div className="mt-16 md:mt-24 grid grid-cols-12 gap-y-10 md:gap-10">
           <Reveal className="col-span-12 md:col-span-5">
             <p
               className="font-mono-ui text-[11px] tracking-[0.22em] uppercase"
