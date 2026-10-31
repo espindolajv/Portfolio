@@ -37,6 +37,15 @@ export function Nav() {
     document.startViewTransition(() => flushSync(() => setLang(l)));
   };
 
+  // na home, o nome rola suave até o topo em vez de renavegar (que pula direto)
+  const scrollTop = (e: React.MouseEvent) => {
+    if (pathname !== "/") return;
+    e.preventDefault();
+    setOpen(false);
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+  };
+
   const langSwitch = (
     <div className="flex items-center gap-1" role="group" aria-label={t("v3.nav.language")}>
       {LANGS.map((l) => {
@@ -62,7 +71,7 @@ export function Nav() {
       style={{ background: "var(--nav-bg)" }}
     >
       <div className="max-w-[1440px] mx-auto px-6 md:px-10 h-14 grid grid-cols-12 gap-x-6 items-center">
-        <Link href="/" className="col-span-8 md:col-span-3 text-sm font-medium tracking-[-0.01em] whitespace-nowrap">
+        <Link href="/" onClick={scrollTop} className="col-span-8 md:col-span-3 text-sm font-medium tracking-[-0.01em] whitespace-nowrap">
           João Victor Macedo
         </Link>
 
