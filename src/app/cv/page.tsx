@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link";
-import { MdArrowBack, MdPrint } from "react-icons/md";
+import { ArrowLeft, Printer } from "lucide-react";
 
 export default function CVPage() {
   const handlePrint = () => {
@@ -12,10 +12,10 @@ export default function CVPage() {
     <body className="cv-body">
       <div className="cv-toolbar print:hidden">
         <Link href="/" className="cv-back">
-          <MdArrowBack /> <span>Voltar ao portfólio</span>
+          <ArrowLeft aria-hidden size={16} /> <span>Voltar ao portfólio</span>
         </Link>
         <button onClick={handlePrint} className="cv-print">
-          <MdPrint /> <span>Baixar PDF / Imprimir</span>
+          <Printer aria-hidden size={16} /> <span>Baixar PDF / Imprimir</span>
         </button>
       </div>
 
@@ -38,10 +38,10 @@ export default function CVPage() {
         <section className="cv-section">
           <h2><span>01</span> Perfil</h2>
           <p>
-            Desenvolvedor full-stack, 23 anos, formado em <em>Análise e Desenvolvimento de Sistemas</em> pelo UniCEUB.
-            Atuo do front ao back — com React, React Native, Next.js, TypeScript, Node.js, NestJS e C# (.NET) — com
-            atenção a arquitetura, performance e experiência do usuário. Interesse ativo em IA aplicada ao produto
-            (LLMs, RAG, vector DBs).
+            Desenvolvedor full-stack, formado em <em>Análise e Desenvolvimento de Sistemas</em> pelo UniCEUB.
+            Atuo do front ao back — com React, React Native, Next.js, TypeScript, Node.js e NestJS — com
+            atenção a arquitetura, performance e experiência do usuário. Em paralelo, desenvolvo como freelancer
+            landing pages e plataformas web, do design ao deploy. Interesse ativo em IA aplicada ao produto (LLMs, RAG).
           </p>
         </section>
 
@@ -62,6 +62,21 @@ export default function CVPage() {
               <li>Integração de CI/CD, testes automatizados e monitoramento para otimizar o ciclo de entrega.</li>
               <li>Liderança em refatorações estruturais e evoluções tecnológicas.</li>
               <li>Colaboração com stakeholders multidisciplinares alinhando decisões técnicas e estratégicas.</li>
+            </ul>
+          </article>
+
+          <article className="cv-job">
+            <div className="cv-job-head">
+              <div>
+                <h3>Desenvolvedor Full Stack Freelancer</h3>
+                <p className="cv-company">Autônomo · Remoto</p>
+              </div>
+              <p className="cv-period">Fev 2024 — Presente</p>
+            </div>
+            <ul>
+              <li>Landing pages para clínicas, profissionais de saúde e serviços locais (Next.js, React, Tailwind).</li>
+              <li>Plataformas web e SaaS, do design ao deploy.</li>
+              <li>App mobile publicado na Play Store (Matchmania).</li>
             </ul>
           </article>
 
@@ -102,6 +117,28 @@ export default function CVPage() {
 
           <article className="cv-project">
             <div className="cv-project-head">
+              <h3>brieffy</h3>
+              <p className="cv-period">2026 · Projeto pessoal · Em desenvolvimento</p>
+            </div>
+            <p>
+              SaaS de gestão de clientes: ficha de cada cliente, leads vindos da landing page, agenda, briefings por link,
+              times com permissões e integração com Google Ads. <strong>Stack:</strong> Next.js, React, Tailwind.
+            </p>
+          </article>
+
+          <article className="cv-project">
+            <div className="cv-project-head">
+              <h3>Morini Industrial</h3>
+              <p className="cv-period">2026 · Freelance</p>
+            </div>
+            <p>
+              Marketplace B2B que conecta indústrias a fornecedores qualificados: publicação de cotações, oportunidades
+              filtradas por processo produtivo e planos de assinatura. <strong>Stack:</strong> React, React Router, TanStack Query, Tailwind.
+            </p>
+          </article>
+
+          <article className="cv-project">
+            <div className="cv-project-head">
               <h3>Matchmania</h3>
               <p className="cv-period">2025 · Freelance · Publicado na Play Store</p>
             </div>
@@ -113,23 +150,12 @@ export default function CVPage() {
 
           <article className="cv-project">
             <div className="cv-project-head">
-              <h3>Plann</h3>
-              <p className="cv-period">2024 · Projeto pessoal</p>
+              <h3>Landing pages</h3>
+              <p className="cv-period">2024 — 2026 · Freelance</p>
             </div>
             <p>
-              Aplicativo de planejamento minimalista — listas, grupos e foco em uma tarefa por vez.
-              <strong> Stack:</strong> Next.js, React, TypeScript, Tailwind.
-            </p>
-          </article>
-
-          <article className="cv-project">
-            <div className="cv-project-head">
-              <h3>Petzone</h3>
-              <p className="cv-period">2024 · Acadêmico</p>
-            </div>
-            <p>
-              Plataforma veterinária ponta-a-ponta: agenda, prontuários, gestão de clientes e perfis para profissionais.
-              <strong> Stack:</strong> Next.js, TypeScript, Node.js, Tailwind, PostgreSQL.
+              R.A. Endodontia, Dr. Pablo Amoroso, Thaís Alves Nutricionista, Dra. Jaqueline Roque e Chaveiro FP —
+              sites institucionais com foco em conversão, SEO local e contato por WhatsApp. <strong>Stack:</strong> Next.js, React, Tailwind.
             </p>
           </article>
         </section>
@@ -138,28 +164,24 @@ export default function CVPage() {
           <h2><span>04</span> Stack</h2>
           <div className="cv-stack">
             <div>
-              <h4>Frontend</h4>
-              <p>React · Next.js · TypeScript · React Native · Tailwind · Angular · Vue.js</p>
+              <h4>Frontend & mobile</h4>
+              <p>React · Next.js · TypeScript · React Native · Tailwind · Angular · Vue.js · iOS · Android</p>
             </div>
             <div>
               <h4>Backend</h4>
-              <p>Node.js · NestJS · Fastify · Express · C# / .NET · REST / OpenAPI · WebSockets</p>
+              <p>Node.js · NestJS · Bun · Hono · Express · REST APIs · WebSockets · RabbitMQ</p>
             </div>
             <div>
-              <h4>Messaging</h4>
-              <p>RabbitMQ · MQTT · Kafka</p>
+              <h4>Dados</h4>
+              <p>PostgreSQL · Prisma / TypeORM · MongoDB · Redis · Firebase</p>
             </div>
             <div>
-              <h4>Data</h4>
-              <p>PostgreSQL · MongoDB · Prisma · Redis · Firebase</p>
+              <h4>DevOps & testes</h4>
+              <p>Docker · GitHub Actions · Vercel · AWS (S3 · EC2 · Lambda) · Cloudflare · Jest / Vitest · Cypress</p>
             </div>
             <div>
-              <h4>Infra & DevOps</h4>
-              <p>Docker · AWS (S3 · EC2 · Lambda) · GitHub Actions · Vercel · Linux</p>
-            </div>
-            <div>
-              <h4>AI & Emerging</h4>
-              <p>LLMs (OpenAI · Anthropic) · RAG · Vector DBs (pgvector) · LangChain · Prompt Engineering</p>
+              <h4>IA aplicada</h4>
+              <p>LLMs (OpenAI · Anthropic) · RAG · pgvector · LangChain</p>
             </div>
           </div>
         </section>
@@ -189,7 +211,7 @@ export default function CVPage() {
 
         <footer className="cv-footer">
           <span>João Victor Macedo</span>
-          <span>joaoespmacedo.dev</span>
+          <span>Atualizado em Out 2026</span>
         </footer>
       </main>
     </body>
