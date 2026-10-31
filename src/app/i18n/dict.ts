@@ -174,7 +174,7 @@ export const dict = {
             },
             contact: {
                 title: 'Vamos construir algo juntos?',
-                lead: 'Projetos freelance, vagas ou uma ideia para tirar do papel — escreva por email ou pelo formulário.',
+                lead: 'Projetos freelance, vagas ou uma ideia para tirar do papel — fale por email, WhatsApp ou pelo formulário.',
                 copy: 'Copiar email', copied: 'Copiado',
                 email: 'Seu email', message: 'Mensagem',
                 placeholder1: 'voce@empresa.com', placeholder2: 'Conte um pouco sobre o projeto',
@@ -358,7 +358,7 @@ export const dict = {
             },
             contact: {
                 title: "Let's build something together?",
-                lead: 'Freelance projects, roles or an idea you want to ship — reach out by email or through the form.',
+                lead: 'Freelance projects, roles or an idea you want to ship — reach out by email, WhatsApp or through the form.',
                 copy: 'Copy email', copied: 'Copied',
                 email: 'Your email', message: 'Message',
                 placeholder1: 'you@company.com', placeholder2: 'Tell me a bit about the project',
@@ -542,7 +542,7 @@ export const dict = {
             },
             contact: {
                 title: '¿Construimos algo juntos?',
-                lead: 'Proyectos freelance, vacantes o una idea para hacer realidad — escríbeme por email o desde el formulario.',
+                lead: 'Proyectos freelance, vacantes o una idea para hacer realidad — escríbeme por email, WhatsApp o desde el formulario.',
                 copy: 'Copiar email', copied: 'Copiado',
                 email: 'Tu email', message: 'Mensaje',
                 placeholder1: 'tu@empresa.com', placeholder2: 'Cuéntame un poco sobre el proyecto',

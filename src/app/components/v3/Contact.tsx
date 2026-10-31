@@ -7,6 +7,7 @@ import { Reveal } from "../redesign/Reveal";
 import { useMyContext } from "@/context/context";
 
 const EMAIL = "joao.espmacedo@gmail.com";
+const WHATSAPP = { label: "+55 61 99331-3459", href: "https://wa.me/5561993313459" };
 const label = "mono text-[11px] uppercase";
 
 export function Contact() {
@@ -82,6 +83,19 @@ export function Contact() {
                 <span aria-live="polite">{copied ? t("v3.contact.copied") : t("v3.contact.copy")}</span>
               </button>
             </div>
+
+            <a
+              href={WHATSAPP.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mt-4 inline-flex flex-wrap items-baseline gap-x-3 gap-y-1"
+            >
+              <span className="text-xl md:text-2xl font-medium tracking-[-0.02em] link-underline">{WHATSAPP.label}</span>
+              <span className="mono text-[11px] uppercase inline-flex items-center gap-1" style={{ color: "var(--muted)" }}>
+                WhatsApp
+                <ArrowUpRight aria-hidden size={13} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </span>
+            </a>
 
             <ul className="mt-8 flex gap-6 text-sm">
               {socials.map((s) => (
