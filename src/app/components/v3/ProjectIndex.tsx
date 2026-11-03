@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import { useState } from "react";
+import { useId, useState } from "react";
 import { ArrowUpRight, Plus } from "lucide-react";
 import { useMyContext } from "@/context/context";
 import type { Project } from "../../projects/data";
@@ -143,6 +143,8 @@ export function ProjectIndex({
   onOpenChange?: (id: string | null) => void;
 }) {
   const { t } = useMyContext();
+  // um projeto pode aparecer em mais de um slide; o prefixo mantém os ids únicos na página
+  const uid = useId();
   const [innerOpen, setInnerOpen] = useState<string | null>(null);
   const open = openId !== undefined ? openId : innerOpen;
   const setOpen = onOpenChange ?? setInnerOpen;
@@ -169,8 +171,8 @@ export function ProjectIndex({
       <ul className="group/list">
         {items.map((p, i) => {
           const isOpen = open === p.id;
-          const btnId = `project-${p.id}`;
-          const panelId = `project-${p.id}-details`;
+          const btnId = `${uid}-project-${p.id}`;
+          const panelId = `${btnId}-details`;
 
           return (
             <li

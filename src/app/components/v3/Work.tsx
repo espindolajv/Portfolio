@@ -7,7 +7,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
 import { ProjectIndex } from "./ProjectIndex";
 import { useMyContext } from "@/context/context";
-import { projects, ProjectCategory } from "../../projects/data";
+import { inCategory, projects, ProjectCategory } from "../../projects/data";
 
 const CATEGORIES: { key: ProjectCategory; labelKey: string }[] = [
   { key: "apps", labelKey: "v3.work.catApps" },
@@ -19,7 +19,7 @@ const pad = (n: number) => String(n).padStart(2, "0");
 
 const groups = CATEGORIES.map((c) => ({
   ...c,
-  items: projects.filter((p) => p.category === c.key),
+  items: projects.filter((p) => inCategory(p, c.key)),
 })).filter((g) => g.items.length > 0);
 
 /** Trabalhos: carrossel com um slide por categoria; o título da seção acompanha o slide. */

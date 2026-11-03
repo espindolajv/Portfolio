@@ -54,6 +54,7 @@ src/
 `src/app/projects/data.ts` é a fonte de dados de projetos. Tanto `/` (seção Projetos) quanto `/projects` consomem esse arquivo. Para adicionar um projeto, edite **apenas** `data.ts` e adicione as chaves de tradução (`work.pN*`) em `i18n/dict.ts`.
 
 - Home (`v3/Work.tsx`): carrossel (embla) com um slide por `category` (Apps web → Mobile → Landing pages), mostrando todos os projetos; o título da seção acompanha o slide ativo. Categoria sem projetos não vira slide.
+- `alsoIn` → categorias extras em que o projeto também aparece (filtre sempre com `inCategory`)
 - `featured` → usado só pela v2
 - `progress: number` (0-100) → mostra "Em progresso · NN%" + barra fina
 - `cover` / `gallery` → prévia dentro do accordion; sem `cover`, mostra placeholder neutro "Prévia em breve"

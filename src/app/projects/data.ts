@@ -19,10 +19,14 @@ import moriniCover from "../../../public/projects/morini-cover.jpg";
 import morini1 from "../../../public/projects/morini-1.jpg";
 import morini2 from "../../../public/projects/morini-2.jpg";
 import morini3 from "../../../public/projects/morini-3.jpg";
-import chaveiroCover from "../../../public/projects/chaveiro-fp-cover.jpg";
-import chaveiro1 from "../../../public/projects/chaveiro-fp-1.jpg";
-import chaveiro2 from "../../../public/projects/chaveiro-fp-2.jpg";
-import chaveiro3 from "../../../public/projects/chaveiro-fp-3.jpg";
+import igcCover from "../../../public/projects/igc-cover.jpg";
+import igc1 from "../../../public/projects/igc-1.jpg";
+import igc2 from "../../../public/projects/igc-2.jpg";
+import igc3 from "../../../public/projects/igc-3.jpg";
+import rhyzaCover from "../../../public/projects/rhyza-cover.jpg";
+import rhyza1 from "../../../public/projects/rhyza-1.jpg";
+import rhyza2 from "../../../public/projects/rhyza-2.jpg";
+import rhyza3 from "../../../public/projects/rhyza-3.jpg";
 import raEndoCover from "../../../public/projects/ra-endodontia-cover.jpg";
 import raEndo1 from "../../../public/projects/ra-endodontia-1.jpg";
 import raEndo2 from "../../../public/projects/ra-endodontia-2.jpg";
@@ -41,6 +45,8 @@ export type Project = {
     title: string;
     year: string;
     category: ProjectCategory;
+    /** categorias extras em que o projeto também aparece */
+    alsoIn?: ProjectCategory[];
     contextType: ProjectContext;
     taglineKey: string;
     descKey: string;
@@ -58,13 +64,45 @@ export type Project = {
     progress?: number;
 };
 
+export const inCategory = (p: Project, c: ProjectCategory) =>
+    p.category === c || (p.alsoIn?.includes(c) ?? false);
+
 export const projects: Project[] = [
+    {
+        id: "rhyza",
+        index: "13",
+        title: "Rhyza Odonto Clínica",
+        year: "2026",
+        category: "landing",
+        contextType: "freelance",
+        taglineKey: "work.p13Tagline",
+        descKey: "work.p13Desc",
+        stack: ["Preact", "Vite", "Tailwind"],
+        href: "https://www.odontorhyza.com.br/",
+        cover: rhyzaCover,
+        gallery: [rhyza1, rhyza2, rhyza3],
+    },
+    {
+        id: "igc",
+        index: "14",
+        title: "Instituto Guilherme Cardia",
+        year: "2026",
+        category: "landing",
+        contextType: "freelance",
+        taglineKey: "work.p14Tagline",
+        descKey: "work.p14Desc",
+        stack: ["Preact", "Vite", "Tailwind"],
+        href: "https://lp-igc.vercel.app/",
+        cover: igcCover,
+        gallery: [igc1, igc2, igc3],
+    },
     {
         id: "brieffy",
         index: "08",
         title: "brieffy",
         year: "2026",
         category: "apps",
+        alsoIn: ["landing"],
         contextType: "personal",
         taglineKey: "work.p8Tagline",
         descKey: "work.p8Desc",
@@ -167,22 +205,6 @@ export const projects: Project[] = [
         gallery: [pablo1, pablo2, pablo3],
     },
     {
-        id: "nutri-thais",
-        index: "05",
-        title: "Thaís Alves",
-        year: "2024",
-        category: "landing",
-        contextType: "freelance",
-        taglineKey: "work.p4Tagline",
-        descKey: "work.p4Desc",
-        stack: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-        href: "https://www.nutrithaisalves.com.br/",
-        cover: thaisCover,
-        gallery: [thais1, thais2, thais3],
-        gradient:
-            "linear-gradient(135deg, #9bad8a 0%, #e9e2cf 55%, #c19a6a 100%)",
-    },
-    {
         id: "jaqueline-roque",
         index: "06",
         title: "Dra. Jaqueline Roque",
@@ -199,17 +221,19 @@ export const projects: Project[] = [
             "linear-gradient(135deg, #f1d6d1 0%, #d9a594 55%, #8d5a4d 100%)",
     },
     {
-        id: "chaveiro-fp",
-        index: "10",
-        title: "Chaveiro FP",
-        year: "2026",
+        id: "nutri-thais",
+        index: "05",
+        title: "Thaís Alves",
+        year: "2024",
         category: "landing",
         contextType: "freelance",
-        taglineKey: "work.p10Tagline",
-        descKey: "work.p10Desc",
-        stack: ["Next.js", "React", "Tailwind"],
-        href: "https://www.chaveirofp.com.br/",
-        cover: chaveiroCover,
-        gallery: [chaveiro1, chaveiro2, chaveiro3],
+        taglineKey: "work.p4Tagline",
+        descKey: "work.p4Desc",
+        stack: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
+        href: "https://www.nutrithaisalves.com.br/",
+        cover: thaisCover,
+        gallery: [thais1, thais2, thais3],
+        gradient:
+            "linear-gradient(135deg, #9bad8a 0%, #e9e2cf 55%, #c19a6a 100%)",
     },
 ];

@@ -7,7 +7,7 @@ import { useMyContext } from "@/context/context";
 import { Shell } from "../components/v3/Shell";
 import { ProjectIndex } from "../components/v3/ProjectIndex";
 import { Reveal } from "../components/redesign/Reveal";
-import { projects, ProjectCategory } from "./data";
+import { inCategory, projects, ProjectCategory } from "./data";
 
 type Filter = "all" | ProjectCategory;
 
@@ -23,16 +23,13 @@ export default function ProjectsPage() {
     const [filter, setFilter] = useState<Filter>("all");
 
     const counts = useMemo(() => {
-        const c: Record<Filter, number> = { all: projects.length, apps: 0, mobile: 0, landing: 0 };
-        projects.forEach((p) => {
-            c[p.category]++;
-        });
-        return c;
+        const count = (k: ProjectCategory) => projects.filter((p) => inCategory(p, k)).length;
+        return { all: projects.length, apps: count("apps"), mobile: count("mobile"), landing: count("landing") } as Record<Filter, number>;
     }, []);
 
     const visible = useMemo(() => {
         if (filter === "all") return projects;
-        return projects.filter((p) => p.category === filter);
+        return projects.filter((p) => inCategory(p, filter));
     }, [filter]);
 
     return (
