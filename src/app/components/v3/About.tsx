@@ -1,9 +1,7 @@
 'use client'
 
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowDownToLine } from "lucide-react";
-import photoMe from "../../../../public/photo.jpg";
 import { SectionHeader } from "./SectionHeader";
 import { Reveal } from "../redesign/Reveal";
 import { useMyContext } from "@/context/context";
@@ -79,74 +77,60 @@ export function About() {
       <div className="max-w-[1440px] mx-auto">
         <SectionHeader index="02" title={t("v3.section.about")} />
 
-        <div className="grid grid-cols-12 gap-y-12 md:gap-x-6">
-          <Reveal className="col-span-12 md:col-span-3">
-            <div className="relative w-40 md:w-full max-w-[260px] aspect-[4/5] overflow-hidden" style={{ background: "var(--surface)" }}>
-              <Image
-                src={photoMe}
-                alt="João Victor Macedo"
-                fill
-                sizes="(max-width: 768px) 160px, 260px"
-                className="object-cover grayscale"
-              />
+        <div>
+          <Reveal>
+            <p className="max-w-4xl text-2xl md:text-[34px] leading-[1.22] tracking-[-0.03em] text-pretty">
+              {t("v3.about.lead")}
+            </p>
+          </Reveal>
+          <Reveal delay={80}>
+            <div className="mt-8 grid grid-cols-12 gap-y-6 md:gap-x-6">
+              <p className="col-span-12 md:col-span-8 text-base leading-relaxed" style={{ color: "var(--muted)" }}>
+                {t("v3.about.body")}
+              </p>
             </div>
+            <Link
+              href="/cv"
+              className="mt-8 inline-flex items-center gap-2 h-11 px-5 rounded-full text-sm font-medium transition-opacity hover:opacity-85"
+              style={{ background: "var(--text)", color: "var(--bg)" }}
+            >
+              <ArrowDownToLine aria-hidden size={16} />
+              {t("v3.about.cv")}
+            </Link>
           </Reveal>
 
-          <div className="col-span-12 md:col-span-9 lg:col-span-8">
+          <div className="mt-16 md:mt-24 flex flex-col gap-14">
             <Reveal>
-              <p className="text-2xl md:text-[34px] leading-[1.22] tracking-[-0.03em] text-pretty">
-                {t("v3.about.lead")}
-              </p>
+              <Timeline
+                title={t("v3.about.experience")}
+                rows={career.map((c) => ({
+                  period: t(c.periodKey),
+                  primary: t(c.roleKey),
+                  secondary: t(c.companyKey),
+                  aside: t(c.locKey),
+                  notes: c.notes.map((n) => t(n)),
+                }))}
+              />
             </Reveal>
-            <Reveal delay={80}>
-              <div className="mt-8 grid grid-cols-12 gap-y-6 md:gap-x-6">
-                <p className="col-span-12 md:col-span-8 text-base leading-relaxed" style={{ color: "var(--muted)" }}>
-                  {t("v3.about.body")}
-                </p>
-              </div>
-              <Link
-                href="/cv"
-                className="mt-8 inline-flex items-center gap-2 h-11 px-5 rounded-full text-sm font-medium transition-opacity hover:opacity-85"
-                style={{ background: "var(--text)", color: "var(--bg)" }}
-              >
-                <ArrowDownToLine aria-hidden size={16} />
-                {t("v3.about.cv")}
-              </Link>
+            <Reveal>
+              <Timeline
+                title={t("v3.about.education")}
+                rows={education.map((e) => ({
+                  period: t(e.periodKey),
+                  primary: t(e.titleKey),
+                  secondary: t(e.orgKey),
+                }))}
+              />
             </Reveal>
-
-            <div className="mt-16 md:mt-24 flex flex-col gap-14">
-              <Reveal>
-                <Timeline
-                  title={t("v3.about.experience")}
-                  rows={career.map((c) => ({
-                    period: t(c.periodKey),
-                    primary: t(c.roleKey),
-                    secondary: t(c.companyKey),
-                    aside: t(c.locKey),
-                    notes: c.notes.map((n) => t(n)),
-                  }))}
-                />
-              </Reveal>
-              <Reveal>
-                <Timeline
-                  title={t("v3.about.education")}
-                  rows={education.map((e) => ({
-                    period: t(e.periodKey),
-                    primary: t(e.titleKey),
-                    secondary: t(e.orgKey),
-                  }))}
-                />
-              </Reveal>
-              <Reveal>
-                <Timeline
-                  title={t("v3.about.languages")}
-                  rows={[
-                    { primary: t("v3.about.langPt"), secondary: t("v3.about.langPtLevel") },
-                    { primary: t("v3.about.langEn"), secondary: t("v3.about.langEnLevel") },
-                  ]}
-                />
-              </Reveal>
-            </div>
+            <Reveal>
+              <Timeline
+                title={t("v3.about.languages")}
+                rows={[
+                  { primary: t("v3.about.langPt"), secondary: t("v3.about.langPtLevel") },
+                  { primary: t("v3.about.langEn"), secondary: t("v3.about.langEnLevel") },
+                ]}
+              />
+            </Reveal>
           </div>
         </div>
       </div>
