@@ -19,6 +19,10 @@ import moriniCover from "../../../public/projects/morini-cover.jpg";
 import morini1 from "../../../public/projects/morini-1.jpg";
 import morini2 from "../../../public/projects/morini-2.jpg";
 import morini3 from "../../../public/projects/morini-3.jpg";
+import stwCover from "../../../public/projects/stw-digital-cover.jpg";
+import stw1 from "../../../public/projects/stw-digital-1.jpg";
+import stw2 from "../../../public/projects/stw-digital-2.jpg";
+import stw3 from "../../../public/projects/stw-digital-3.jpg";
 import igcCover from "../../../public/projects/igc-cover.jpg";
 import igc1 from "../../../public/projects/igc-1.jpg";
 import igc2 from "../../../public/projects/igc-2.jpg";
@@ -219,6 +223,20 @@ export const projects: Project[] = [
         gallery: [jaqueline1, jaqueline2, jaqueline3],
         gradient:
             "linear-gradient(135deg, #f1d6d1 0%, #d9a594 55%, #8d5a4d 100%)",
+    },
+    {
+        id: "stw-digital",
+        index: "07",
+        title: "STW Digital",
+        year: "2025",
+        category: "landing",
+        contextType: "freelance",
+        taglineKey: "work.p6Tagline",
+        descKey: "work.p6Desc",
+        stack: ["React", "Vite", "Tailwind"],
+        href: "https://stwdigital.com.br/",
+        cover: stwCover,
+        gallery: [stw1, stw2, stw3],
     },
     {
         id: "nutri-thais",
